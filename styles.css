@@ -1,0 +1,21 @@
+.pealkiri {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.alapealkiri {
+    font-size: 24px;
+    font-weight: normal;
+    color: #666666;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.header {
+    background-color: #862424;
+    padding: 15px;
+}
