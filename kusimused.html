@@ -16,15 +16,21 @@
     <div>
         <h2>Küsimused</h2>
         <img src="https://piiprellid.wordpress.com/wp-content/uploads/2009/02/sprinterid.jpg" alt="Pilt rahvatantsijast" width = '500' height = '300'>
-        <p>Kui särtsakas sa oled?(1-10)</p>
-        <p>Kas sa pigem kargaks ja hüppaks või oleksid rahulik?</p>
-        <p>Milline neist suvistest lauludest on sinu lemmik?</p>
-        <p>Kas auto või jalgratas?</p>
-        <p>Mis on sinu lemmikvärv</p>
-        <p>Kas sa oled varem tanstinud? (Klubis ei loe)</p>
-        <p>Kas sulle meeldivad pigem soojad või külmad ilmad?</p>
+        <p>Kui särtsakas sa oled?(1-5)</p>
+        <button id="vastusBtn">Salvesta valik</button>
         
+        <select id="sartsakusValik">
+            <option value="">-- Vali --</option>
+            <option value="1">1 - Väga rahulik</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 - Väga särtsakas</option>
+        </select>
+
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 
