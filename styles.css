@@ -6,8 +6,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     background-color: #000000;
-    background-image: url('veebilehe pildid/muster.webp');
-    background-size: cover;
+    background-image: url('veebilehe_pildid/muster.png');
+    background-size: 50vh 50vh;
     background-repeat: repeat;
     box-sizing: border-box;
 }
@@ -32,8 +32,8 @@ header h1 {
 .container {
     width: 100%;
     max-width: 1200px;
-    background-color: rgb(0, 0, 0);
-    padding: 0 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    background-color : rgba(0, 0, 0, 0.7);
     text-align: center;
     box-shadow: none;
     margin-top: 0;
