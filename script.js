@@ -8,10 +8,10 @@ btn.addEventListener('click', () => {
         return;
     }
 
-    // Salvesta brauseri localStorage'i
+    
     localStorage.setItem('sartsakusValik', val);
 
-    // Kuvab tulemuse lehel (lisab <p id="tulemus">, kui seda pole)
+    
     let tulemuseEl = document.getElementById('tulemus');
     if (!tulemuseEl) {
         tulemuseEl = document.createElement('p');
@@ -20,6 +20,5 @@ btn.addEventListener('click', () => {
     }
     tulemuseEl.textContent = `Salvestatud: ${val}`;
 
-    // Kui tahad saata serverisse, kasuta fetchi (näide):
-    // fetch('/save-choice', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({sartsakus: val}) });
+   
 });
