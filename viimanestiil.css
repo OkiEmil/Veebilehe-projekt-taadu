@@ -8,15 +8,33 @@ body {
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
+    color : antiquewhite;
+}
+
+@keyframes containerFadeIn {
+    0% {opacity: 0; transform:translateX(-20px);}
+    100% {opacity:1; transform: translateX(0);}
 }
 
 .container {
+    animation: containerFadeIn 0.8s ease-in;
+
     margin-top: 30px;
     width : 80%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(66, 31, 31, 0.7);
     padding: 40px;
     border-radius: 30px;
+    border: 5px solid rgb(49, 10, 10);
+    text-align: center;
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    -webkit-box-shadow:0 0 20px rgb(255, 255, 255); 
+    -moz-box-shadow: 0 0 20px rgb(97, 0, 0); 
+    box-shadow:0 0 100px rgba(255, 255, 255, 0.815);
 }
 
 @keyframes scroll {
@@ -27,7 +45,7 @@ body {
 
 .background {
     opacity: 1;
-    animation: scroll 5s linear infinite;
+    animation: scroll 7s linear infinite;
     position: fixed;
     background-image: url(veebilehe_pildid/muster.png);
     background-repeat: repeat;
@@ -36,4 +54,106 @@ body {
     width: 116vw;
     height: 100vh;
 
+}
+
+.playbutton {
+    margin-top: 10px;
+    background-color: #f00;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 30px;
+    padding: 5px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    cursor: pointer;
+    transition : background-color 0.3s linear, color 0.3s linear;
+}
+
+.playbutton:hover {
+    background-color: darkred;
+    box-shadow: 0 0 20px rgb(172, 172, 172);
+    color:antiquewhite
+}
+
+.playbutton:hover * {
+    box-shadow: none;
+}
+
+
+
+
+.invbox {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: none;
+    width: 90%;
+    background-color: rgba(61, 37, 0, 0.2);
+    border-width: 6px;
+    border-color: rgb(165, 121, 0);
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes scrolldown {
+    from {
+        transform: translateY(0);
+    }    
+    to {
+        transform: translateY(9vw);
+    }
+}
+
+@keyframes scrollup {
+    from {
+        transform: translateY(0);
+    }    
+    to {
+        transform: translateY(-9vw);
+    }
+}
+
+
+.leftbar {
+    animation: scrolldown 2s linear infinite;
+    left: 0;
+    top: -20vw;
+
+    background-image: url("veebilehe_pildid/K-Nõo.jpg");
+    position: fixed;
+    background-position: top left;
+    background-repeat:repeat-y;
+    background-size: 15vw 9vw;
+    width: 15vw;
+    height: 120vw;
+    box-shadow: 0 0 20px black;
+}
+
+.rightbar {
+    animation: scrollup 2s linear infinite;
+    right: 0;
+    top: 0vw;
+
+    background-image: url("veebilehe_pildid/K-Nõo.jpg");
+    position: fixed;
+    background-position: top right;
+    background-repeat:repeat-y;
+    background-size: 15vw 9vw;
+    width: 15vw;
+    height: 120vw;
+    box-shadow: 0 0 50px black;
+}
+
+.sideflex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoplayer{
+    width: 50%;
+    box-shadow: 0 0 40px rgb(29, 1, 1);
 }
