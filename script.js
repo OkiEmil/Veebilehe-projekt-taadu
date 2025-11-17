@@ -11,7 +11,7 @@ btn.addEventListener('click', () => {
     
     localStorage.setItem('sartsakusValik', val);
 
-    
+
     let tulemuseEl = document.getElementById('tulemus');
     if (!tulemuseEl) {
         tulemuseEl = document.createElement('p');
