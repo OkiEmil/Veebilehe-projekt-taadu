@@ -1,11 +1,35 @@
 
 const playbutton = document.getElementsByClassName("playbutton")[0];
+const testbutton = document.getElementById("testbutton");
 const invbox = document.getElementsByClassName("invbox")[0];
+const result = document.getElementById("resulttext");
+const videoresult = document.getElementById("videoresult")
+
+var resulttext = null;
+
+
 
 console.log(playbutton)
 
+
+function changeResult(result_value) {
+    resulttext = result_value
+    console.log(resulttext)
+}
+
+testbutton.addEventListener("click", function(){
+    changeResult("tuljak");
+});
+
 playbutton.addEventListener("click", function(){
-    console.log("TERE")
+    console.log(result)
+    if (resulttext == null) {
+        result.innerHTML = "SINU TULEMUS ON: ... (sa pole veel küsitlust täitnud)";
+    }
+    else if (resulttext == "tuljak") {
+        result.innerHTML = "SINU TULEMUS ON: TULJAK!!";
+        videoresult.src = "https://www.youtube.com/embed/e5x9wtnkZdg";
+    }
     visibleAnim()
 });
 
