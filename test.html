@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Quiz</title>
+  <style>
+    .question {
+      display: none; /* Hide all questions at first */
+    }
+    .active {
+      display: block; /* Show the current question */
+    }
+  </style>
+</head>
+<body>
+
+<h1>Quiz</h1>
+
+<form id="quizForm">
+
+  <div class="question active" id="q1">
+    <p>1. Choose an option:</p>
+    <label><input type="radio" name="q1" value="A"> Option A</label><br>
+    <label><input type="radio" name="q1" value="B"> Option B</label><br>
+    <label><input type="radio" name="q1" value="C"> Option C</label><br>
+    <button type="button" onclick="nextQuestion(1)">Next</button>
+  </div>
+
+  <div class="question" id="q2">
+    <p>2. Choose an option:</p>
+    <label><input type="radio" name="q2" value="A"> Option A</label><br>
+    <label><input type="radio" name="q2" value="B"> Option B</label><br>
+    <label><input type="radio" name="q2" value="C"> Option C</label><br>
+
+    <button type="button" onclick="prevQuestion(2)">Back</button>
+    <button type="button" onclick="nextQuestion(2)">Next</button>
+  </div>
+
+  <div class="question" id="q3">
+    <p>3. Choose an option:</p>
+    <label><input type="radio" name="q3" value="A"> Option A</label><br>
+    <label><input type="radio" name="q3" value="B"> Option B</label><br>
+    <label><input type="radio" name="q3" value="C"> Option C</label><br>
+
+    <button type="button" onclick="prevQuestion(3)">Back</button>
+    <button type="button" onclick="calculateResult()">Submit</button>
+  </div>
+
+</form>
+
+<script src="test.js"></script>
+
+</body>
+</html>
