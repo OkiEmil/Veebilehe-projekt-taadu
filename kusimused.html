@@ -12,23 +12,41 @@
     <div>
         <h1>Milline rahvatants oled sina?</h1>
 
-    </div>
-    <div>
-        <h2>Küsimused</h2>
-        <img src="https://piiprellid.wordpress.com/wp-content/uploads/2009/02/sprinterid.jpg" alt="Pilt rahvatantsijast" width = '500' height = '300'>
-        <p>Kui särtsakas sa oled?(1-5)</p>
-        <button id="vastusBtn">Salvesta valik</button>
-        
-        <select id="sartsakusValik">
-            <option value="">-- Vali --</option>
-            <option value="1">1 - Väga rahulik</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 - Väga särtsakas</option>
-        </select>
+        <form id="quizForm">
 
-    </div>
+  <div class="question active" id="küsimus1">
+    <img src="https://piiprellid.wordpress.com/wp-content/uploads/2009/02/sprinterid.jpg" alt="Pilt rahvatantsijast" width = '500' height = '300'>
+    <p>Kui särtsakas sa oled?</p>
+    <label><input type="radio" name="küsimus1" value="A"> 1 </label><br>
+    <label><input type="radio" name="küsimus1" value="B"> 2 </label><br>
+    <label><input type="radio" name="küsimus1" value="C"> 3 </label><br>
+    <label><input type="radio" name="küsimus1" value="D"> 4 </label><br>
+    <label><input type="radio" name="küsimus1" value="E"> 5 </label><br>
+    <button type="button" onclick="nextQuestion(1)">Next</button>
+  </div>
+
+  <div class="question" id="küsimus2">
+    <p>Milline neist suvistest lauludest on sinu lemmik?</p>
+    <label><input type="radio" name="küsimus2" value="A"> Kauges külas</label><br>
+    <label><input type="radio" name="küsimus2" value="B"> Pärlipüüdja</label><br>
+    <label><input type="radio" name="küsimus2" value="C"> Maakas</label><br>
+
+    <button type="button" onclick="prevQuestion(2)">Tagasi</button>
+    <button type="button" onclick="nextQuestion(2)">Järgmine</button>
+  </div>
+
+  <div class="question" id="küsimus3">
+    <p>3. Choose an option:</p>
+    <label><input type="radio" name="küsimus3" value="A"> Option A</label><br>
+    <label><input type="radio" name="küsimus3" value="B"> Option B</label><br>
+    <label><input type="radio" name="küsimus3" value="C"> Option C</label><br>
+
+    <button type="button" onclick="prevQuestion(3)">Back</button>
+    <button type="button" onclick="calculateResult()">Submit</button>
+  </div>
+
+</form>
+
 
     <script src="script.js"></script>
 </body>

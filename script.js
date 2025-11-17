@@ -1,24 +1,28 @@
-const btn = document.getElementById('vastusBtn');
-const select = document.getElementById('sartsakusValik');
+function showQuestion(num) {
+  document.querySelectorAll(".question").forEach(küsimus => küsimus.classList.remove("active"));
+  document.getElementById("küsimus" + num).classList.add("active");
+}
 
-btn.addEventListener('click', () => {
-    const val = select.value;
-    if (!val) {
-        alert('Palun vali väärtus (1–5).');
-        return;
-    }
+function nextQuestion(current) {
+  showQuestion(current + 1);
+}
 
-    
-    localStorage.setItem('sartsakusValik', val);
+function prevQuestion(current) {
+  showQuestion(current - 1);
+}
 
+function calculateResult() {
+  let scores = { A: 0, B: 0, C: 0 };
 
-    let tulemuseEl = document.getElementById('tulemus');
-    if (!tulemuseEl) {
-        tulemuseEl = document.createElement('p');
-        tulemuseEl.id = 'tulemus';
-        select.parentNode.appendChild(tulemuseEl);
-    }
-    tulemuseEl.textContent = `Salvestatud: ${val}`;
+  const formData = new FormData(document.getElementById("quizForm"));
+  for (let value of formData.values()) {
+    scores[value]++;
+  }
 
-   
-});
+  let highest = Object.keys(scores).reduce((a, b) =>
+    scores[a] > scores[b] ? a : b
+  );
+
+  localStorage.setItem("quizResult", highest);
+  window.location.href = "tulemus.html";
+}

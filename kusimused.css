@@ -5,9 +5,17 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #000000;
-    background-image: url('veebilehe_pildid/muster.png');
+    background-color: #c7c7c7;
+    /*background-image: url('veebilehe_pildid/muster.png'); */
     background-size: 200vh 100vh;
     background-repeat: repeat;
     box-sizing: border-box;
 }
+ 
+    .question {
+      display: none; 
+    }
+    .active {
+      display: block; 
+    }
+
