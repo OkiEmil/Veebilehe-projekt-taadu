@@ -19,7 +19,7 @@ body {
 .container {
     animation: containerFadeIn 0.8s ease-in;
 
-    margin-top: 30px;
+    margin-top: 120px;
     width : 80%;
     background-color: rgba(66, 31, 31, 0.7);
     padding: 10px;
@@ -156,10 +156,69 @@ body {
 
 .videoplayer{
     width: 50%;
-    height: 40vw;
+    height: 30vw;
     box-shadow: 0 0 40px rgb(29, 1, 1);
 }
 .gifs{
     width: 15%;
     height: 15%;
 }
+
+header {
+    z-index: 1000;
+    top: 0px;
+    position: fixed;
+    display: block;
+    background-color: #b70000;
+    color: white;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+header nav {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    color:#269e3a;
+}
+
+header nav:hover {
+    color:#1f6f2a
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Tahoma', sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.meistnupp {
+    background-color: #269e3a;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.meistnupp:hover {
+    background-color: #1f6f2a;
+    transform: translateY(-2px);
+}
+
