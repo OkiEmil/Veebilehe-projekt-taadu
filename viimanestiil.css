@@ -20,7 +20,6 @@ body {
     animation: containerFadeIn 0.8s ease-in;
     height: 300px;
     overflow: hidden;
-    margin-top: 120px;
     width : 80%;
     background-color: rgba(66, 31, 31, 0.7);
     padding: 10px;
@@ -166,10 +165,8 @@ body {
 }
 
 header {
-    z-index: 1000;
-    top: 0px;
-    position: fixed;
-    display: block;
+
+    position: relative;
     background-color: #b70000;
     color: white;
     padding: 15px 0;
