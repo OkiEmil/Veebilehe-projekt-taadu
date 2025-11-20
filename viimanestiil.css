@@ -18,7 +18,8 @@ body {
 
 .container {
     animation: containerFadeIn 0.8s ease-in;
-
+    height: 300px;
+    overflow: hidden;
     margin-top: 120px;
     width : 80%;
     background-color: rgba(66, 31, 31, 0.7);
@@ -128,7 +129,7 @@ body {
     background-repeat:repeat-y;
     background-size: 15vw 9vw;
     width: 15vw;
-    height: 150vh;
+    height: 200vh;
     box-shadow: 0 0 20px black;
 }
 

@@ -4,6 +4,8 @@ const testbutton = document.getElementById("testbutton");
 const invbox = document.getElementsByClassName("invbox")[0];
 const result = document.getElementById("resulttext");
 const videoresult = document.getElementById("videoresult")
+const container = document.getElementById("container")
+let container_height = container.clientHeight   
 
 var resulttext = null;
 
@@ -35,16 +37,17 @@ playbutton.addEventListener("click", function(){
 
 
 function visibleAnim(){
-
+    
     let start = Date.now();
     let timer = setInterval(function() {
+    
     playbutton.style.display = "none";
         
         let timePassed = Date.now() - start;
 
         //yks sekund animatsiooni (1000ms)
         if (timePassed >= 1000) {
-            
+            console.log(container.style.height  )
             clearInterval(timer);
             
             return; 
@@ -55,10 +58,18 @@ function visibleAnim(){
 }, 20)};
 
 function draw(timePassed){
-    console.log(invbox.style.display)
     if (invbox.style.display == ""){
         invbox.style.display = "block";
     }; 
     /* console.log(Date.now()); */
     invbox.style.opacity = timePassed/1000;
+
+    /* console.log(parseInt(container.style.height.slice(0, -2))); */
+    if (container.clientHeight < container.scrollHeight && container.style.height != "auto") {
+        container.style.height = String(container_height + 1.2*timePassed)+"px";
+    }
+    else {
+        container.style.height = "auto";
+    }
+    
 }
