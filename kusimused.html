@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KÜSIMUSTE LEHT</title>
     <link rel="stylesheet" href="kusimused.css" type="text/css">
 
 </head>
@@ -22,28 +22,41 @@
     <label><input type="radio" name="küsimus1" value="C"> 3 </label><br>
     <label><input type="radio" name="küsimus1" value="D"> 4 </label><br>
     <label><input type="radio" name="küsimus1" value="E"> 5 </label><br>
-    <button type="button" onclick="nextQuestion(1)">Next</button>
+    <button type="button" onclick="nextQuestion(1)">Järgmine küsimus</button>
   </div>
 
   <div class="question" id="küsimus2">
+    <img src="https://api.rahvamaja.ee/uploads/large_465005167_1007213674768474_5104061136501491052_n_2bbc6e35ec.jpg" alt="Naisrahvatantsijad" width="500" height="300">
     <p>Milline neist suvistest lauludest on sinu lemmik?</p>
-    <label><input type="radio" name="küsimus2" value="A"> Kauges külas</label><br>
-    <label><input type="radio" name="küsimus2" value="B"> Pärlipüüdja</label><br>
-    <label><input type="radio" name="küsimus2" value="C"> Maakas</label><br>
+    <label><input type="radio" name="küsimus2" value="A"> "Kauges külas"</label><br>
+    <label><input type="radio" name="küsimus2" value="B"> "Pärlipüüdja"</label><br>
+    <label><input type="radio" name="küsimus2" value="C"> "Maakas"</label><br>
 
-    <button type="button" onclick="prevQuestion(2)">Tagasi</button>
-    <button type="button" onclick="nextQuestion(2)">Järgmine</button>
+    <button type="button" onclick="prevQuestion(2)">Eelmine küsimus</button>
+    <button type="button" onclick="nextQuestion(2)">Järgmine küsimus</button>
   </div>
 
   <div class="question" id="küsimus3">
-    <p>3. Choose an option:</p>
-    <label><input type="radio" name="küsimus3" value="A"> Option A</label><br>
-    <label><input type="radio" name="küsimus3" value="B"> Option B</label><br>
-    <label><input type="radio" name="küsimus3" value="C"> Option C</label><br>
+    <img src="https://scontent.ftll3-1.fna.fbcdn.net/v/t1.6435-9/151228852_3743666259082131_4524729545264656675_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_ohc=wpRJlTqrjOAQ7kNvwEiy88D&_nc_oc=Admc6aX-QLmQLcLMzv9NcPrZYj9r62oKGOvTuYoMuMmZNoz7A0VdJR2f-hegGg0mI4E&_nc_zt=23&_nc_ht=scontent.ftll3-1.fna&_nc_gid=BOkZq9gV9Y5W3DdJLFitYQ&oh=00_Afhq8h3eiFwI33p3K3T-0zVTgEqrM6cZ76uRXsx6qzDDNw&oe=694839EB" alt="Tuljak" width="500" height="300">
+    <p>Kas sulle meeldivad pigem suvised, talvised või nende vahepealsed ilmad?</p>
+    <label><input type="radio" name="küsimus3" value="A"> Soojad</label><br>
+    <label><input type="radio" name="küsimus3" value="B"> Külmad</label><br>
+    <label><input type="radio" name="küsimus3" value="C"> Vahepealsed</label><br>
 
-    <button type="button" onclick="prevQuestion(3)">Back</button>
-    <button type="button" onclick="calculateResult()">Submit</button>
+    <button type="button" onclick="prevQuestion(3)">Eelmine küsimus</button>
+    <button type="button" onclick="nextQuestion(3)">Järgmine küsimus</button>
   </div>
+
+  <div class="question" id="küsimus4">
+    <img src="https://sabatants.ee/wp-content/uploads/2017/04/oige-ja-vasemba-1.jpg" alt="Oige ja vasemba" width="500" height="300">
+    <p>Kas sa oled varem mingisuguseid rahvatantse tantsinud?</p>
+    <label><input type="radio" name="küsimus4" value="A"> Ei</label><br>
+    <label><input type="radio" name="küsimus4" value="B"> Ja</label><br>
+    
+    <button type="button" onclick="prevQuestion(4)">Eelmine küsimus</button>
+    <button type="button" onclick="calculateResult()">Saada ära</button>
+  </div>
+
 
 </form>
 
