@@ -130,4 +130,29 @@ header h1 {
     transform: translateY(-2px);
 }
 
+.nupukonteiner {
+    margin-top: 15px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    flex-wrap:nowrap;
+}
+
+.nupukonteiner .nupp {
+    margin-left: 5%;;
+}
+
+
+
+.kirjeldus {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+}
+
+.kirjeldus.visible {
+    opacity: 1;
+    display: block;
+    
+}
 
