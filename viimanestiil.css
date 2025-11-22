@@ -168,12 +168,13 @@ body {
 header {
     z-index: 10;
     position: fixed;
-    background-color: #b70000;
+    background-color: #b7000083;
     color: white;
     padding: 15px 0;
     margin-bottom: 20px;
     width: 100%;
     text-align: center;
+    backdrop-filter: blur(3px);
 }
 
 header nav {
