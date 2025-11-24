@@ -34,16 +34,24 @@
     <button type="button" onclick="prevQuestion(2)">Back</button>
     <button type="button" onclick="nextQuestion(2)">Next</button>
   </div>
-
   <div class="question" id="q3">
-    <p>3. Choose an option:</p>
-    <label><input type="radio" name="q3" value="A"> Option A</label><br>
-    <label><input type="radio" name="q3" value="B"> Option B</label><br>
-    <label><input type="radio" name="q3" value="C"> Option C</label><br>
+    <p>2. Choose an option:</p>
+    <label><input type="range" min="0" max="2" name="slaider" value="3"> Option D</label><br>
 
     <button type="button" onclick="prevQuestion(3)">Back</button>
+    <button type="button" onclick="nextQuestion(3)">Next</button>
+  </div>
+
+  <div class="question" id="q4">
+    <p>3. Choose an option:</p>
+    <label><input type="radio" name="q4" value="A"> Option A</label><br>
+    <label><input type="radio" name="q4" value="B"> Option B</label><br>
+    <label><input type="radio" name="q4" value="C"> Option C</label><br>
+
+    <button type="button" onclick="prevQuestion(4)">Back</button>
     <button type="button" onclick="calculateResult()">Submit</button>
   </div>
+
 
 </form>
 
