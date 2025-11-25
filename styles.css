@@ -6,21 +6,37 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #000000;
-    background-image: url('veebilehe_pildid/muster.png');
-    background-size: 50vh 50vh;
-    background-repeat: repeat;
     box-sizing: border-box;
+}
+
+@keyframes scroll {
+    0% {transform:translateY(0)}
+    100% {transform:translateX(16vh)}
+}
+
+.background {
+    opacity: 1;
+    animation: scroll 5s linear infinite;
+    position: fixed;
+    background-image: url(veebilehe_pildid/muster.png);
+    background-repeat: repeat;
+    background-size: 16vh 4vh;
+    background-position: center;
+    left: -16vh;
+    width: 200%;
+    height: 120vh;
+    z-index: -1;
 }
 
 header {
     position: relative;
-    background-color: #b70000;
+    background-color: rgba(183, 0, 0, 0.5);
     color: white;
     padding: 15px 0;
     margin-bottom: 20px;
     width: 100%;
     text-align: center;
+    backdrop-filter: blur(3px);
 }
 
 header nav {
@@ -46,6 +62,11 @@ header h1 {
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
+    transition: font-size 0.2s ease;
+}
+
+header h1:hover {
+    font-size: 2.7em;
 }
 
 .container {
@@ -59,7 +80,7 @@ header h1 {
 }
 
 .tekstikast {
-   background-color: #ffc0cb;
+   background-color: rgba(255, 192, 203, 0.7);
    padding: 15px 20px;
    margin-bottom: 20px;
    border-radius: 5px;
@@ -67,22 +88,30 @@ header h1 {
    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
+.tekstikast:hover {
+    background-color: rgba(255, 182, 193, 0.9);
+}
+
 .tekstikast p {
     margin: 0;
     font-size: 1.5em;
-    color: #333;
+    color: #000000;
     line-height: 1.6;
     font-weight: bold;
 }
 
 .tekstikast#viimane-tekstikast {
-    background-color: #ffc0cb;
+    background-color: rgba(255, 192, 203, 0.7);
     border: 2px solid #b70000;
     color: white;
     font-weight: bold;;
     max-width: 400px;
     margin: 0 auto 20px auto;
     text-align: center;
+}
+
+.tekstikast#viimane-tekstikast:hover {
+    background-color: rgba(255, 182, 193, 0.9);
 }
 
 .pildid {
@@ -94,12 +123,17 @@ header h1 {
 }
 
 .pildiraam {
-    background-color: #b70000;
+    background-color: rgba(183, 0, 0, 0.5);
     border: 5px solid #b70000;
     padding: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.pildiraam:hover {
+    transform: scale(1.2);
 }
 
 .pildiraam img {
@@ -132,10 +166,12 @@ header h1 {
 
 .nupukonteiner {
     margin-top: 15px;
+    margin-bottom: 15px;
     flex-direction: row;
     display: flex;
     justify-content: center;
     flex-wrap:nowrap;
+    font-weight: bold;
 }
 
 .nupukonteiner .nupp {
