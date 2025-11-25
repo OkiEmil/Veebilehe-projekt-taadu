@@ -1,10 +1,11 @@
-// Retrieve the stored value
+
 const result = localStorage.getItem("quizResult");
 
 let message = "";
 
-if (result === "A") message = "You are Result A!";
-if (result === "B") message = "You are Result B!";
-if (result === "C") message = "You are Result C!";
+if (result === "A") message = "Sinule sobib kõige rohkem A";
+if (result === "B") message = "Sinule sobib kõige rohkem B";
+if (result === "C") message = "Sinule sobib kõige rohkem C";
+if (result === "D") message = "Sinule sobib kõige rohkem D";
 
 document.getElementById("resultText").textContent = message;
