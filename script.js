@@ -12,7 +12,7 @@ function prevQuestion(current) {
 }
 
 function calculateResult() {
-  let scores = { A: 0, B: 0, C: 0 };
+  let scores = { A: 0, B: 0, C: 0, D: 0 };
 
   const formData = new FormData(document.getElementById("quizForm"));
   for (let value of formData.values()) {
@@ -24,5 +24,5 @@ function calculateResult() {
   );
 
   localStorage.setItem("quizResult", highest);
-  window.location.href = "tulemus.html";
+  window.location.href = "viimane.html";
 }

@@ -25,7 +25,7 @@ else if (results === "C") {
     changeResult("reilender");
 }
 else if (results === "D") {
-    changeResult("oigejavasempa");
+    changeResult("oigejavasemba");
 }
 
 
@@ -68,8 +68,8 @@ playbutton.addEventListener("click", function(){
         
         videoresult.src = "https://www.youtube.com/embed/jjBwArIE9fQ";
     }
-    else if (resulttext == "oigejavasempa") {
-        result.innerHTML = "SINU TULEMUS ON: OIGE JA VASEMPA!!";
+    else if (resulttext == "oigejavasemba") {
+        result.innerHTML = "SINU TULEMUS ON: OIGE JA VASEMBA!!";
         kirjeldus.innerHTML = 'Sul on hästi palju tutvusi, kuid lähedasi inimesi on vähe. Oled rahulik inimene, kes hindab kvaliteeti üle kvantiteedi. Sulle meeldib käia jalutamas ja mõtiskleda omi mõtteid näiteks oma sõpradest, ümbritsevast loodusest või ilmast. Sul ei lähe mitte kunagi vasak ja parem käsi sassi'
         
         videoresult.src = "https://www.youtube.com/embed/CSzDwH4xJHw";
