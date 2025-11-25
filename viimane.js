@@ -3,31 +3,31 @@ const playbutton = document.getElementsByClassName("playbutton")[0];
 const testbutton = document.getElementById("testbutton");
 const invbox = document.getElementsByClassName("invbox")[0];
 const result = document.getElementById("resulttext");
-const kirjeldus = document.getElementById("kirjeldus")
-const videoresult = document.getElementById("videoresult")
-const container = document.getElementById("container")
-let container_height = container.clientHeight   
-const results = localStorage.getItem("quizResult")
+const kirjeldus = document.getElementById("kirjeldus");
+const videoresult = document.getElementById("videoresult");
+const container = document.getElementById("container");
+let container_height = container.clientHeight   ;
+const resultvalue = localStorage.getItem("quizResult");
 var resulttext = null;
 
 /* Selle koodi autoriks on Emil */
 
-console.log(playbutton)
 
 
-if (results === "A") {
+if (resultvalue === "A") {
     changeResult("tuljak");
 }
-else if (results === "B") {
+else if (resultvalue === "B") {
     changeResult("kaerajaan");
 }
-else if (results === "C") {
+else if (resultvalue === "C") {
     changeResult("reilender");
 }
-else if (results === "D") {
+else if (resultvalue === "D") {
     changeResult("oigejavasemba");
 }
 
+console.log(resultvalue)
 
 
 
@@ -35,7 +35,6 @@ else if (results === "D") {
 /* Paneb muutuja õigeks vastusevariandiks */
 function changeResult(result_value) {
     resulttext = result_value
-    console.log(resulttext)
 }
 
 
@@ -45,7 +44,6 @@ testbutton.addEventListener("click", function(){
 
 /* Kuvab peale nupu vajutamist tulemuse ja aktiveerib animatsiooni */
 playbutton.addEventListener("click", function(){
-    console.log(result)
     if (resulttext == null) {
         result.innerHTML = "SINU TULEMUS ON: ... (sa pole veel küsitlust täitnud)";
         kirjeldus.innerHTML = "Siin kohal oleks tantsu kirjeldus"

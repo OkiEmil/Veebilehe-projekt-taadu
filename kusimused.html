@@ -18,11 +18,15 @@
   <div class="question active" id="küsimus1">
     <img src="https://piiprellid.wordpress.com/wp-content/uploads/2009/02/sprinterid.jpg" alt="Pilt rahvatantsijast" width = '500' height = '300'>
     <h2>Kui sulle antaks tasuta reis, kuhu läheksid?</h2>
+    <div class="valikukonteiner">
     <label><input type="radio" name="küsimus1" value="A"> Soome </label><br>
     <label><input type="radio" name="küsimus1" value="B"> Jaapan </label><br>
     <label><input type="radio" name="küsimus1" value="C"> Itaalia</label><br>
     <label><input type="radio" name="küsimus1" value="D"> Austria </label><br>
+    </div>
+    <div class="nupukonteiner">
     <button type="button" onclick="nextQuestion(1)">Järgmine küsimus</button>
+    </div>
   </div>
 
   <div class="question" id="küsimus2">
@@ -33,14 +37,16 @@
     <label><input type="radio" name="küsimus2" value="C"> "Aluspükse" 5MIINUST </label><br>
     <label><input type="radio" name="küsimus2" value="D"> "Tantsuriik" Triibupasta </label><br>
 
+    <div class="nupukonteiner">
     <button type="button" onclick="prevQuestion(2)">Eelmine küsimus</button>
     <button type="button" onclick="nextQuestion(2)">Järgmine küsimus</button>
+    </div> 
   </div>
 
   <div class="question" id="küsimus3">
-    <img src="https://scontent.ftll3-1.fna.fbcdn.net/v/t1.6435-9/151228852_3743666259082131_4524729545264656675_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_ohc=wpRJlTqrjOAQ7kNvwEiy88D&_nc_oc=Admc6aX-QLmQLcLMzv9NcPrZYj9r62oKGOvTuYoMuMmZNoz7A0VdJR2f-hegGg0mI4E&_nc_zt=23&_nc_ht=scontent.ftll3-1.fna&_nc_gid=BOkZq9gV9Y5W3DdJLFitYQ&oh=00_Afhq8h3eiFwI33p3K3T-0zVTgEqrM6cZ76uRXsx6qzDDNw&oe=694839EB" alt="Tuljak" width="500" height="300">
+    <img src="veebilehe_pildid/mustvalgetuljak.jpg" alt="Tuljak" width="500" height="300">
     <h2>Kas sulle meeldivad pigem suvised, talvised või nende vahepealsed ilmad?</h2>
-  <label><input type="range" min="0" max="3" name="slaider" value="3"> Vasakul pool on "Ei" ja paremal "Jah" </label><br>
+  <label><input type="range" min="0" max="3" name="slaider" value="3"> Vasakul pool on "Talvised" ja paremal "Suvised" </label><br>
     <div class="nupukonteiner">
     <button type="button" onclick="prevQuestion(3)">Eelmine küsimus</button>
     <button type="button" onclick="nextQuestion(3)">Järgmine küsimus</button>
@@ -52,9 +58,10 @@
     <h2>Kas sa oled varem rahvatantsu tantsinud?</h2>
     <label><input type="radio" name="küsimus4" value="A"> Ei</label><br>
     <label><input type="radio" name="küsimus4" value="B"> Ja</label><br>
-  
+    <div class="nupukonteiner">
     <button type="button" onclick="prevQuestion(4)">Eelmine küsimus</button>
     <button type="button" onclick="nextQuestion(4)">Järgmine küsimus</button>
+    </div>
   </div>
 
   <div class="question" id="küsimus5">
@@ -63,9 +70,10 @@
     <label><input type="radio" name="küsimus5" value="B"> Sotsiaalne ja sõbralik</label><br>
     <label><input type="radio" name="küsimus5" value="C"> Energiline ja seiklushimuline </label><br>
     <label><input type="radio" name="küsimus5" value="D"> Kohanemisvõimeline ja loov </label><br>
-    
+    <div class="nupukonteiner">
     <button type="button" onclick="prevQuestion(5)">Eelmine küsimus</button>
     <button type="button" onclick="nextQuestion(5)">Järgmine küsimus</button>
+    </div>
   </div>
 
   <div class="question" id="küsimus6">
@@ -75,8 +83,10 @@
     <label><input type="radio" name="küsimus6" value="C"> Kiire tempoga lood </label><br>
     <label><input type="radio" name="küsimus6" value="D"> Nii kiire kui ka rahulikutempoga muusikapalad </label><br>
     
+    <div class="nupukonteiner">
     <button type="button" onclick="prevQuestion(6)">Eelmine küsimus</button>
     <button type="button" onclick="nextQuestion(6)">Järgmine küsimus</button>
+    </div>
   </div>
 
   <div class="question" id="küsimus7">
@@ -86,8 +96,10 @@
     <label><input type="radio" name="küsimus7" value="C"> Mida keerulisem, seda parem! </label><br>
     <label><input type="radio" name="küsimus7" value="D"> Meeldib vaheldus </label><br>
     
+    <div class="nupukonteiner">
     <button type="button" onclick="prevQuestion(7)">Eelmine küsimus</button>
     <button type="button" onclick="nextQuestion(7)">Järgmine küsimus</button>
+    </div>  
   </div>
 
   <div class="question" id="küsimus8">
@@ -97,8 +109,10 @@
     <label><input type="radio" name="küsimus8" value="C"> Terve õhtu</label><br>
     <label><input type="radio" name="küsimus8" value="D"> Energiat jagub kõige jaoks</label><br>
     
+    <div class="nupukonteiner">
     <button type="button" onclick="prevQuestion(8)">Eelmine küsimus</button>
     <button type="button" onclick="nextQuestion(8)">Järgmine küsimus</button>
+    </div>
   </div>
 
   <div class="question" id="küsimus9">
@@ -108,8 +122,10 @@
     <label><input type="radio" name="küsimus9" value="C"> Beach Grind</label><br>
     <label><input type="radio" name="küsimus9" value="D"> Tüdruksõbraga kodus veinitamine</label><br>
     
+    <div class="nupukonteiner">
     <button type="button" onclick="prevQuestion(9)">Eelmine küsimus</button>
     <button type="button" onclick="nextQuestion(9)">Järgmine küsimus</button>
+    </div> 
   </div>
 
   <div class="question" id="küsimus10">
@@ -119,8 +135,10 @@
     <label><input type="radio" name="küsimus10" value="C"> Suur seltskond annab energiat</label><br>
     <label><input type="radio" name="küsimus10" value="D"> Võin tantsida üksi kui ka grupiga </label><br>
     
+    <div class="nupukonteiner">
     <button type="button" onclick="prevQuestion(10)">Eelmine küsimus</button>
     <button type="button" onclick="calculateResult()">Saada ära</button>
+    </div>
   </div>
 
 </form>

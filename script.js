@@ -40,5 +40,7 @@ function calculateResult() {
   );
 
   localStorage.setItem("quizResult", highest);
+  /* console.log("Salvestatud tulemus:", highest);
+  alert(localStorage.getItem("quizResult")); */
   window.location.href = "viimane.html";
 }
