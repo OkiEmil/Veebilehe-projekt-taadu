@@ -1,6 +1,5 @@
 
 const playbutton = document.getElementsByClassName("playbutton")[0];
-const testbutton = document.getElementById("testbutton");
 const invbox = document.getElementsByClassName("invbox")[0];
 const result = document.getElementById("resulttext");
 const kirjeldus = document.getElementById("kirjeldus");
@@ -13,7 +12,7 @@ var resulttext = null;
 /* Selle koodi autoriks on Emil */
 
 
-
+/* Määrab tulemuse vastavalt salvestatud väärtusele */
 if (resultvalue === "A") {
     changeResult("tuljak");
 }
@@ -26,8 +25,35 @@ else if (resultvalue === "C") {
 else if (resultvalue === "D") {
     changeResult("oigejavasemba");
 }
+ if (resulttext == null) {
+        result.innerHTML = "SINU TULEMUS ON: ... (sa pole veel küsitlust täitnud)";
+        kirjeldus.innerHTML = "Siin kohal oleks tantsu kirjeldus"
+    }
+else if (resulttext == "tuljak") {
+        result.innerHTML = "SINU TULEMUS ON: TULJAK!!";
+        kirjeldus.innerHTML = 'Nagu "Tuljak", oled ka sina energiline ja krapsakas. Oled arvatavasti leidnud oma eluarmastuse või aktiivselt seda otsimas. Sinu iga liigutus on kalkuleeritud, kuid samas ülimalt hingestatud. Sa ei karda võtta ette suuri raskuseid. Laskem elada!'
 
-console.log(resultvalue)
+        videoresult.src = "https://www.youtube.com/embed/e5x9wtnkZdg";
+    }
+else if (resulttext == "kaerajaan") {
+        result.innerHTML = "SINU TULEMUS ON: KAERA-JAAN!!";
+        kirjeldus.innerHTML = 'Oled lihtsameelne eestlane, kes on mõeldud olema talunik. Sulle meeldib olla rambivalguses, mistõttu kipud vahel liigselt hooplema. Samas on sul sisimas soe süda, mis toob kokku inimesi su ümber'
+        
+        videoresult.src = "https://www.youtube.com/embed/xwUUq29YR9o?si=67KyBa-u2M6SHz9E";
+    }
+else if (resulttext == "reilender") {
+        result.innerHTML = "SINU TULEMUS ON: REILENDER!!";
+        kirjeldus.innerHTML = 'Sulle sobib väga rutiin, kuna suudad leida võlu igapäevastes asjades. Samuti meeldib sulle teha asju oma tempos ja mingil imelikul põhjusel armastad luua silmsidet, vahel isegi tundes, et võiksid oma sõprade silmades uppuda. Karusell on sinu lemmikatraktsioon lõbustuspargis'
+        
+        videoresult.src = "https://www.youtube.com/embed/jjBwArIE9fQ";
+    }
+else if (resulttext == "oigejavasemba") {
+        result.innerHTML = "SINU TULEMUS ON: OIGE JA VASEMBA!!";
+        kirjeldus.innerHTML = 'Sul on hästi palju tutvusi, kuid lähedasi inimesi on vähe. Oled rahulik inimene, kes hindab kvaliteeti üle kvantiteedi. Sulle meeldib käia jalutamas ja mõtiskleda omi mõtteid näiteks oma sõpradest, ümbritsevast loodusest või ilmast. Sul ei lähe mitte kunagi vasak ja parem käsi sassi'
+        
+        videoresult.src = "https://www.youtube.com/embed/CSzDwH4xJHw";
+    }
+
 
 
 
@@ -37,41 +63,14 @@ function changeResult(result_value) {
     resulttext = result_value
 }
 
-
+/* const testbutton = document.getElementById("testbutton");
 testbutton.addEventListener("click", function(){
     changeResult("tuljak");
-});
+}); */
 
 /* Kuvab peale nupu vajutamist tulemuse ja aktiveerib animatsiooni */
 playbutton.addEventListener("click", function(){
-    if (resulttext == null) {
-        result.innerHTML = "SINU TULEMUS ON: ... (sa pole veel küsitlust täitnud)";
-        kirjeldus.innerHTML = "Siin kohal oleks tantsu kirjeldus"
-    }
-    else if (resulttext == "tuljak") {
-        result.innerHTML = "SINU TULEMUS ON: TULJAK!!";
-        kirjeldus.innerHTML = 'Nagu "Tuljak", oled ka sina energiline ja krapsakas. Oled arvatavasti leidnud oma eluarmastuse või aktiivselt seda otsimas. Sinu iga liigutus on kalkuleeritud, kuid samas ülimalt hingestatud. Sa ei karda võtta ette suuri raskuseid. Laskem elada!'
-
-        videoresult.src = "https://www.youtube.com/embed/e5x9wtnkZdg";
-    }
-    else if (resulttext == "kaerajaan") {
-        result.innerHTML = "SINU TULEMUS ON: KAERA-JAAN!!";
-        kirjeldus.innerHTML = 'Oled lihtsameelne eestlane, kes on mõeldud olema talunik. Sulle meeldib olla rambivalguses, mistõttu kipud vahel liigselt hooplema. Samas on sul sisimas soe süda, mis toob kokku inimesi su ümber'
-        
-        videoresult.src = "https://www.youtube.com/embed/xwUUq29YR9o?si=67KyBa-u2M6SHz9E";
-    }
-    else if (resulttext == "reilender") {
-        result.innerHTML = "SINU TULEMUS ON: REILENDER!!";
-        kirjeldus.innerHTML = 'Sulle sobib väga rutiin, kuna suudad leida võlu igapäevastes asjades. Samuti meeldib sulle teha asju oma tempos ja mingil imelikul põhjusel armastad luua silmsidet, vahel isegi tundes, et võiksid oma sõprade silmades uppuda. Karusell on sinu lemmikatraktsioon lõbustuspargis'
-        
-        videoresult.src = "https://www.youtube.com/embed/jjBwArIE9fQ";
-    }
-    else if (resulttext == "oigejavasemba") {
-        result.innerHTML = "SINU TULEMUS ON: OIGE JA VASEMBA!!";
-        kirjeldus.innerHTML = 'Sul on hästi palju tutvusi, kuid lähedasi inimesi on vähe. Oled rahulik inimene, kes hindab kvaliteeti üle kvantiteedi. Sulle meeldib käia jalutamas ja mõtiskleda omi mõtteid näiteks oma sõpradest, ümbritsevast loodusest või ilmast. Sul ei lähe mitte kunagi vasak ja parem käsi sassi'
-        
-        videoresult.src = "https://www.youtube.com/embed/CSzDwH4xJHw";
-    }
+   
     visibleAnim()
 });
 
