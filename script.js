@@ -57,8 +57,12 @@ function calculateResult() {
         scores[täht]++;
       }
     } 
+
+    /* For-loop on, et võimaldada ühel valikvastusel anda skoori mitme tulemuse suunas */
     else {
-      scores[value]++;
+      for (let i = 0; i < value.length; i++) {
+        scores[value[i]]++; 
+      }
       }
     }
   
