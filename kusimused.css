@@ -7,13 +7,13 @@ body {
     align-items: center;
     background-color: #c7c7c7;
     background-image: url('veebilehe_pildid/K-Nõo.jpg'); 
-    backdrop-filter: blur(4px); 
-    background-size: 200vh 100vh;
+    /* backdrop-filter: blur(4px); */ 
+    background-size: 100% 100vh;
     background-repeat: repeat;
     box-sizing: border-box;
     padding: 20px;
 
-    height: 100vh;
+    height: 120vh;
     }
  
     .question {
@@ -24,6 +24,11 @@ body {
       margin: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 50vw;
+
+    }
+    .question *  {
+      max-width: 95%;
     }
 
     .active {
@@ -117,7 +122,7 @@ label:has(input[type="radio"]:checked) {
 
 .valikukonteiner {
   justify-content: center;
-  width: 70%;
+  width: 75%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -129,3 +134,20 @@ label:has(input[type="radio"]:checked) {
 
 
 
+@media only screen and (max-width:500px) {
+  /* Moblade jaoks */
+  .question {
+    width: 90vw;
+    overflow:auto;
+  }
+  .question *  {
+    max-width: 95%;
+  }
+  .valikukonteiner {
+    width: 100%;
+  }
+  .valikukonteiner label {
+    width: 80%; 
+    margin: 10px 0;
+  }
+}
