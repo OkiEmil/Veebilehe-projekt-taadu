@@ -39,10 +39,6 @@ function changeResult(result_value) {
 }
 
 
-testbutton.addEventListener("click", function(){
-    changeResult("tuljak");
-});
-
 /* Kuvab peale nupu vajutamist tulemuse ja aktiveerib animatsiooni */
 playbutton.addEventListener("click", function(){
     console.log(result)
