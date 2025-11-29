@@ -1,6 +1,5 @@
 
 const playbutton = document.getElementsByClassName("playbutton")[0];
-const testbutton = document.getElementById("testbutton");
 const invbox = document.getElementsByClassName("invbox")[0];
 const result = document.getElementById("resulttext");
 const kirjeldus = document.getElementById("kirjeldus")
@@ -37,7 +36,6 @@ function changeResult(result_value) {
     resulttext = result_value
     console.log(resulttext)
 }
-
 
 /* Kuvab peale nupu vajutamist tulemuse ja aktiveerib animatsiooni */
 playbutton.addEventListener("click", function(){
