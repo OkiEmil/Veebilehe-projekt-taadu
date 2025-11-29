@@ -17,7 +17,7 @@ function prevQuestion(current) {
 }
 
 
-/* Kontrollib, kas küsimus on raadio-tüüpi ja kui on, siis kontrollib, kas üks valikvastustest on valitud */
+/* Kontrollib, kas küsimus on raadio-tüüpi ja kui on, siis kontrollib, kas ükski valikvastustest on valitud */
 function isRadioSelected(current) {
 
   let selector = 'input[type="radio"][name="'+'küsimus'+current+'"]';
@@ -39,7 +39,11 @@ function isRadioSelected(current) {
 }
 
 
-function calculateResult() {
+function calculateResult(current) {
+  
+  if (!isRadioSelected(current)){
+    return;
+  }
 
   let scores = { A: 0, B: 0, C: 0 , D: 0};
   
