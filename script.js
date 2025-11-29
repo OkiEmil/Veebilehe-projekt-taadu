@@ -4,12 +4,40 @@ function showQuestion(num) {
 }
 
 function nextQuestion(current) {
-  showQuestion(current + 1);
+  if (isRadioSelected(current)){
+    showQuestion(current + 1);
+  }
 }
 
 function prevQuestion(current) {
+
   showQuestion(current - 1);
+  
+  
 }
+
+
+/* Kontrollib, kas küsimus on raadio-tüüpi ja kui on, siis kontrollib, kas üks valikvastustest on valitud */
+function isRadioSelected(current) {
+
+  let selector = 'input[type="radio"][name="'+'küsimus'+current+'"]';
+  
+  if (document.querySelector(selector) == null) {
+    return true;
+  }
+  else{
+    selector += ':checked';
+  }
+  const selectedRadio = document.querySelector(selector);
+
+  if (selectedRadio) {
+    return true; 
+  } else {
+    alert("Sa ei valinud veel vastust...")
+    return false;
+  }
+}
+
 
 function calculateResult() {
 
