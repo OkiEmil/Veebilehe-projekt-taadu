@@ -254,4 +254,12 @@ header h1:hover {
  .sideflex{
     flex-direction: column;
   }
+  .playbutton {
+    flex-direction: column;
+    border-radius: 15px;
+  }
+  .playbutton img {
+    width: 50px;
+    height: 50px;
+  }
 }
