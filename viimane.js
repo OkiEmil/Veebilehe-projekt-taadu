@@ -63,14 +63,11 @@ function changeResult(result_value) {
     resulttext = result_value
 }
 
-<<<<<<< HEAD
-=======
 /* const testbutton = document.getElementById("testbutton");
 testbutton.addEventListener("click", function(){
     changeResult("tuljak");
 }); */
 
->>>>>>> kusimused.html
 /* Kuvab peale nupu vajutamist tulemuse ja aktiveerib animatsiooni */
 playbutton.addEventListener("click", function(){
    
