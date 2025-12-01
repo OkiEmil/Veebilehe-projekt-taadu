@@ -46,10 +46,15 @@ body {
       background-color: #4caf50;
       color: white;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, font-size 0.2s ease;
+      font-family: 'Tahoma', sans-serif;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
     button:hover {
       background-color: #45a049;
-      transform: translateY(-2px);
+      transform: scale(1.1) translateY(-2px);
+
     }
     img {
       border-radius: 10px;
@@ -70,10 +75,12 @@ body {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, font-size 0.2s ease;
     }
     label:hover {
       font-size: 1.1em;
       background-color: #38803c;
+      transform: scale(1.1);
     }
 
     label:has(input[type="range"]):hover{
