@@ -1,23 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="et">
 <head>
     <link rel="stylesheet" href="viimanestiil.css">
     <title> Tulemused </title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrerpolicy" content="strict-origin-when-cross-origin">
 </head>
 
     <body>
         <div class="background"></div>
-        <div class="container">
-            <h2>SIIA LEHELE KUVATAKSE SU TULEMUS !!!</h2>
-            <p>Siia tuleb lühike kirjeldus sinu tulemusest ja mida see sinu kohta ütleb. Lisaks on allpool videolink sellele tantsule (work in progress).</p>
-            <iframe width="500" height="400"
-            src="https://youtu.be/xwUUq29YR9o?si=PkTZfWFtAdD98ORq">
-        </iframe> 
-        
+        <div class="leftbar"></div>
+        <div class="rightbar"></div>
+
+        <header class="navbar">
+            <h1>Tantsupeegel</h1>
+                <nav>
+                    <a href="about.html" class="meistnupp">Meist</a>
+                </nav>
+         </header>
+
+        <div class="container" id="container">
+            
+
+            <div class="invbox">
+                <h2 id="resulttext">SINU TULEMUS ON: ...</h2>
+                <p id="kirjeldus">Siia tuleb lühike kirjeldus sinu tulemusest ja mida see sinu kohta ütleb. Lisaks on allpool videolink sellele tantsule (work in progress).</p>
+                <div class="sideflex">
+                    <img class="gifs" src="veebilehe_pildid/cat_happy.gif" width="200" height="200" alt="happy cat">
+                    <iframe id="videoresult" class="videoplayer" src="https://www.youtube.com/embed/xwUUq29YR9o?si=67KyBa-u2M6SHz9E" height="400" allowfullscreen allow="fullscreen"></iframe> 
+                    <img class="gifs" src="veebilehe_pildid/confetti.gif" width="200" height="200" alt="confetti">
+                </div>
+            </div>
+            <div class="playbutton">
+                    <h2> VAJUTA SIIA, ET NÄHA OMA TULEMUST!</h2>
+                    <img src="veebilehe_pildid/nooleke.gif" width="100" height="100" alt="Arrow">
+            </div>
+
+            
 
         </div>
-        
+        <script src="viimane.js"></script>
     </body>
 
 
