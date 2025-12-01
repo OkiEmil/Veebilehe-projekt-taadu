@@ -77,7 +77,7 @@ body {
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.2s ease, font-size 0.2s ease;
     }
-    label:hover {
+    label:has(input[type="radio"]):hover{
       font-size: 1.1em;
       background-color: #38803c;
       transform: scale(1.1);
