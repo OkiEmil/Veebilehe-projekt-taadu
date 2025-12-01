@@ -1,3 +1,5 @@
+/* Koodi autoriks on Oliver koos tehisintellekti abiga */
+/* Näitab antud numbriga küsimust ja peidab teised ära, nii et ainult üks küsimus on korraga nähtav */
 function showQuestion(num) {
   document.querySelectorAll(".question").forEach(küsimus => küsimus.classList.remove("active"));
   document.getElementById("küsimus" + num).classList.add("active");
@@ -38,7 +40,7 @@ function isRadioSelected(current) {
   }
 }
 
-
+/* Võtab küsimuste vastused, slaiderilt võtab joone peal oleva tulemuse ja salvestab selle localStorage-sse */
 function calculateResult(current) {
   
   if (!isRadioSelected(current)){
@@ -70,7 +72,7 @@ function calculateResult(current) {
       }
     }
   
-
+  /* Leiab kõrgeima skoori ja selle muutuja */
   let highest = Object.keys(scores).reduce((a, b) =>
     scores[a] > scores[b] ? a : b
   );
