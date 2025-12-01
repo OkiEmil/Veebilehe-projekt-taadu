@@ -219,3 +219,20 @@ header h1:hover {
     
 }
 
+@media only screen and (max-width:500px) {
+    header {
+    padding: 5px 0;
+  }
+  header nav {
+    font-size: 0.8em;
+    right: 0px;
+    margin-right: 10px;
+  }
+  header h1 {
+    font-size: 1.5em;
+  }
+  .nupp {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
+}
