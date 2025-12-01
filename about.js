@@ -2,7 +2,7 @@ const tekstid = document.querySelectorAll('.tekstikast .kirjeldus');
 
 console.log(tekstid);
 
-
+/* See kood valib seda, millist tekstilõiku Meist-lehel kuvada, autor on Emil */
 
 function showText(index) {
 

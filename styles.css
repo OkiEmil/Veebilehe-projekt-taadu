@@ -77,6 +77,8 @@ header h1:hover {
     text-align: center;
     box-shadow: none;
     margin-top: 20px;
+    border-radius: 5px;
+    border: 5px solid #000000;
 }
 
 .tekstikast {
@@ -98,6 +100,7 @@ header h1:hover {
     color: #000000;
     line-height: 1.6;
     font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .tekstikast#viimane-tekstikast {
@@ -134,6 +137,7 @@ header h1:hover {
 
 .pildiraam:hover {
     transform: scale(1.2);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
 }
 
 .pildiraam img {
@@ -157,11 +161,32 @@ header h1:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: inline-block;
     text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.nupp:hover {
+.nupp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     background-color: #1f6f2a;
-    transform: translateY(-2px);
+    width: 0;
+    z-index: -1;
+    transition: width 0.5s ease;
+}
+
+.nupp:hover::before {
+    width: 100%;
+    
+}
+.nupp:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .nupukonteiner {
@@ -170,12 +195,14 @@ header h1:hover {
     flex-direction: row;
     display: flex;
     justify-content: center;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     font-weight: bold;
+    gap: 10px;
 }
 
 .nupukonteiner .nupp {
-    margin-left: 5%;;
+    margin-left: 0;
+    margin: 5px
 }
 
 
@@ -192,3 +219,20 @@ header h1:hover {
     
 }
 
+@media only screen and (max-width:500px) {
+    header {
+    padding: 5px 0;
+  }
+  header nav {
+    font-size: 0.8em;
+    right: 0px;
+    margin-right: 10px;
+  }
+  header h1 {
+    font-size: 1.5em;
+  }
+  .nupp {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
+}
