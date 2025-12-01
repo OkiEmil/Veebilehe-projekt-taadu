@@ -228,7 +228,7 @@ header h1:hover {
 }
 
 @media only screen and (max-width:500px) {
-  /* For mobile phones: */
+  /* Moblade jaoks */
   header {
     padding: 5px 0;
   }
